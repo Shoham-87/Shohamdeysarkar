@@ -1,0 +1,186 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Mukta', sans-serif; }
+
+body {
+  background-color: #c8d6e5;
+  overflow-x: hidden; }
+
+html {
+  scroll-behavior: smooth; }
+
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  z-index: 100000;
+  overflow: hidden;
+  position: absolute; }
+  #preloader .loader {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 4px dotted #10ac84;
+    background-color: transparent;
+    padding: 10px;
+    animation: preloader-animation 1s ease infinite; }
+
+@keyframes preloader-animation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+    #preloader .loader .right_border {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border-right: 2px solid #ee5253;
+      position: absolute;
+      padding: 1px;
+      animation: preloader-animation-right 2s ease infinite; }
+
+@keyframes preloader-animation-right {
+  0% {
+    transform: rotate(-360deg); }
+  100% {
+    transform: rotate(360deg); } }
+      #preloader .loader .right_border .left_border {
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        border-left: 2px solid #ff9f43;
+        position: absolute;
+        animation: preloader-animation-left 3s ease infinite; }
+
+@keyframes preloader-animation-left {
+  0% {
+    transform: rotate(3600deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+header {
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+  header nav {
+    width: 100vw;
+    height: 4.5rem;
+    background-color: #121920;
+    z-index: 100;
+    transition: all 1s linear; }
+    header nav #logo {
+      color: #10ac84;
+      position: absolute;
+      font-size: 1rem;
+      left: 10%; }
+      header nav #logo::first-letter {
+        font-size: 2.6rem;
+        color: #eb2f06; }
+    header nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 45rem;
+      height: inherit;
+      margin-left: auto; }
+      header nav ul li {
+        list-style: none;
+        padding: 2rem;
+        position: relative; }
+        header nav ul li a {
+          font-size: 1.5rem;
+          text-decoration: none;
+          color: #fff; }
+        header nav ul li::after {
+          position: absolute;
+          left: 1rem;
+          bottom: 1.8rem;
+          width: 0%;
+          height: 0.18rem;
+          content: "";
+          background-color: #fff;
+          transition: all 0.9s ease-in-out; }
+        header nav ul li:hover::after {
+          width: 90%; }
+  header .text_Wrapper {
+    width: 100vw;
+    height: 72vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    position: absolute;
+    color: #222f3e;
+    margin-top: 1rem; }
+    header .text_Wrapper .txt-type {
+      border-right: 3px solid #222f3e; }
+  header::before {
+    width: 100vw;
+    height: 80vh;
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    background: url("../images/img1.jpg") no-repeat center center/cover;
+    background-attachment: fixed; }
+
+.btn {
+  width: 13rem;
+  height: 2.2rem;
+  border: none;
+  outline: none;
+  color: #c8d6e5;
+  background-color: #30336b;
+  box-shadow: 1rem 1rem 1rem #000;
+  margin: 10px;
+  font-size: 1.4rem;
+  border-radius: 14px;
+  transition: all 0.7s ease; }
+  .btn:hover {
+    transform: scale(1.2); }
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #menu {
+    width: 40px;
+    height: 45px;
+    margin: 30px 0px 20px 20px;
+    position: absolute; }
+  .bar {
+    width: 100%;
+    height: 6px;
+    background-color: #e22222;
+    display: block;
+    transition: all .4s ease-in-out; }
+  ul a {
+    display: none; }
+  #logo {
+    margin: auto;
+    display: block; }
+  .hamclick {
+    height: 100vh !important; }
+    .hamclick ul {
+      flex-direction: column; }
+      .hamclick ul li {
+        margin: auto; }
+        .hamclick ul li a {
+          display: block; }
+  #bar1 {
+    transform: translateY(-4px); }
+  #bar3 {
+    transform: translateY(4px); }
+  .hamclick .bar {
+    background-color: aliceblue; }
+  .hamclick #bar1 {
+    transform: translateY(5px) rotate(45deg); }
+  .hamclick #bar3 {
+    transform: translateY(-6px) rotate(-45deg); }
+  .hamclick #bar2 {
+    opacity: 0; }
+  .hamclick {
+    display: block !important; }
+  .hambg {
+    transition: all 0.5s ease-in-out;
+    display: block !important; } }

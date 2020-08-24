@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap");
+#about {
+  width: 85vw;
+  margin: auto;
+  position: relative; }
+  #about #about_logo {
+    width: 19rem;
+    height: 29rem;
+    border-radius: 1rem;
+    box-shadow: 1.5rem 1rem 2rem 1rem #222f3e; }
+  #about #about_textwrapper {
+    position: absolute;
+    top: 0.3rem;
+    margin-left: 22rem; }
+    #about #about_textwrapper h1 {
+      font-size: 1.8rem; }
+    #about #about_textwrapper .text p {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 1.2rem;
+      text-align: justify;
+      line-height: 1.6rem; }
+    #about #about_textwrapper #occupation {
+      width: inherit;
+      height: 100%; }
+    #about #about_textwrapper .lang {
+      display: flex;
+      flex-direction: column; }
+      #about #about_textwrapper .lang h3 {
+        margin: 0.6rem 0px; }
+      #about #about_textwrapper .lang .progress {
+        width: 85%;
+        height: 0.5rem;
+        position: absolute;
+        right: 2rem;
+        margin-left: 1.5rem;
+        margin-top: 0.5rem;
+        display: inline-block;
+        border-radius: 1rem; }
+        #about #about_textwrapper .lang .progress .py {
+          border-radius: 1rem;
+          background-color: #4834d4;
+          width: 80%;
+          height: inherit; }
+          #about #about_textwrapper .lang .progress .py::after {
+            content: "80%";
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            transform: translateY(-10px); }
+        #about #about_textwrapper .lang .progress .cplus {
+          border-radius: 1rem;
+          background-color: #4834d4;
+          width: 75%;
+          height: inherit; }
+          #about #about_textwrapper .lang .progress .cplus::after {
+            content: "75%";
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            transform: translateY(-10px); }
+        #about #about_textwrapper .lang .progress .java {
+          border-radius: 1rem;
+          background-color: #4834d4;
+          width: 60%;
+          height: inherit; }
+          #about #about_textwrapper .lang .progress .java::after {
+            content: "60%";
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            transform: translateY(-10px); }
+        #about #about_textwrapper .lang .progress .html {
+          border-radius: 1rem;
+          background-color: #4834d4;
+          width: 85%;
+          height: inherit; }
+          #about #about_textwrapper .lang .progress .html::after {
+            content: "85%";
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            transform: translateY(-10px); }
+        #about #about_textwrapper .lang .progress .scss {
+          border-radius: 1rem;
+          background-color: #4834d4;
+          width: 85%;
+          height: inherit; }
+          #about #about_textwrapper .lang .progress .scss::after {
+            content: "85%";
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            transform: translateY(-10px); }
+        #about #about_textwrapper .lang .progress .js {
+          border-radius: 1rem;
+          background-color: #4834d4;
+          width: 80%;
+          height: inherit; }
+          #about #about_textwrapper .lang .progress .js::after {
+            content: "80%";
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            transform: translateY(-10px); }
+        #about #about_textwrapper .lang .progress .node {
+          border-radius: 1rem;
+          background-color: #4834d4;
+          width: 70%;
+          height: inherit; }
+          #about #about_textwrapper .lang .progress .node::after {
+            content: "70%";
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            transform: translateY(-10px); }
+
+#services {
+  width: 90vw;
+  margin: 1rem auto; }
+  #services h1 {
+    width: 18rem;
+    margin: 1rem auto;
+    font-size: 2.4rem;
+    color: #ee5253;
+    text-align: center; }
+    #services h1::after {
+      width: inherit;
+      height: 0.8rem;
+      font-family: "Font Awesome 5 Free";
+      color: #10ac84;
+      font-size: 1.5rem;
+      content: "\f005";
+      display: block;
+      border-bottom: 2px solid #ee5253; }
+  #services .cards {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #services .cards .card {
+      width: 25rem;
+      height: 25vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 1rem;
+      padding: 1rem; }
+      #services .cards .card .card-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        #services .cards .card .card-logo h2 {
+          text-align: center; }
+        #services .cards .card .card-logo i {
+          font-size: 2.5rem;
+          padding: 1rem;
+          border-radius: 50%;
+          border: 2px solid #222f3e; }
+        #services .cards .card .card-logo .card-text p {
+          text-align: center; }
+
+footer {
+  width: 100vw;
+  height: 10vh;
+  display: grid;
+  place-items: center;
+  background-color: #2f3640;
+  color: #dcdde1; }
+
+@media (min-width: 1281px) {
+  #about {
+    height: 70vh; }
+  #services {
+    height: 80vh; } }
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #services {
+    height: 100vh -30vh; }
+  #about {
+    height: 50vh; }
+  .progress {
+    width: 75% !important; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #services {
+    height: 100vh -25vh; }
+  #about {
+    height: 50vh;
+    display: flex;
+    flex-direction: column; }
+  .progress {
+    width: 71% !important; } }

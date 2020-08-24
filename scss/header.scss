@@ -1,0 +1,83 @@
+*{margin: 0px;padding: 0px;box-sizing: border-box;font-family: 'Mukta', sans-serif;}
+body{background-color: #c8d6e5;overflow-x: hidden;}
+html{scroll-behavior: smooth;}
+@import './module.scss';
+$width-vw:100vw;$height-vw:100vh;
+#preloader{@include width-height($width-vw,$height-vw);
+    @include item-center(#fff);z-index: 100000;overflow: hidden;position: absolute;
+    .loader{@include width-height(5rem,5rem);
+        @include preloader_border(4px,dotted,#10ac84);
+        background-color: transparent;
+        padding: 10px;
+        animation: preloader-animation 1s ease infinite ;
+        @keyframes preloader-animation {
+            0%{transform:rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+        .right_border{@include width-height(3rem,3rem);
+            @include preloader_border_right(2px,solid,#ee5253);
+            position: absolute;
+            padding: 1px;
+            animation: preloader-animation-right 2s ease infinite ;
+            @keyframes preloader-animation-right  {
+                0%{transform:rotate(-360deg);}
+                100%{transform: rotate(360deg);}
+            }
+            .left_border{@include width-height(90%,90%);
+            @include preloader_border_left(2px,solid,#ff9f43);
+            position: absolute;
+            animation: preloader-animation-left 3s ease infinite ;
+            @keyframes preloader-animation-left {
+                0%{transform:rotate(3600deg);}
+                100%{transform: rotate(0deg);}
+            }
+        }
+        }
+    }
+}
+header{@include width-height($width-vw,$height-vw);
+    position: relative;
+    nav{@include width-height($width-vw,4.5rem);background-color: #121920;z-index: 100;
+        transition: all 1s linear;
+        #logo{color: #10ac84;position: absolute;font-size: 1rem;left: 10%;
+            &::first-letter{font-size: 2.6rem;color: #eb2f06;}}
+        ul{@include vertically_align;
+            @include width-height(45rem,inherit);
+            margin-left: auto;
+            li{list-style: none;padding: 2rem;position: relative;
+                a{font-size: 1.5rem;text-decoration:none;color: #fff;
+                }
+                &::after{@include absolute_left_bottom(1rem,1.8rem);
+                    @include width-height(0%,0.18rem);
+                    content: "";
+                    background-color: #fff;
+                    transition: all 0.9s ease-in-out;
+                }
+                &:hover::after{width: 90%;}
+            }
+        }
+    }
+    .text_Wrapper{@include width-height($width-vw, $height-vw - 28vh );
+        @include vertically_align;
+        flex-flow: column wrap;
+        position: absolute;
+        color:#222f3e;
+        margin-top: 1rem;
+        .txt-type{border-right: 3px solid #222f3e;}
+    }
+    &::before{@include width-height($width-vw,$height-vw - 20vh);
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        background: url('../images/img1.jpg') no-repeat center center / cover;
+        background-attachment: fixed;
+    }
+}
+.btn{@include width-height(13rem,2.2rem);
+    @include no-border-outline;
+    @include all_color(#c8d6e5,#30336b,#000);
+    margin: 10px;
+    font-size: 1.4rem;
+    border-radius: 14px;
+    transition: all 0.7s ease;
+    &:hover{transform: scale(1.2);}}

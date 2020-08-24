@@ -1,0 +1,105 @@
+@import './module.scss';
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
+$width-vw:100vw;$height-vw:100vh;
+#about{width: 85vw;
+margin: auto;
+position: relative;
+#about_logo{
+    @include width-height(19rem,29rem);
+    border-radius: 1rem;
+    box-shadow: 1.5rem 1rem 2rem 1rem #222f3e;
+}
+#about_textwrapper{
+    position: absolute;
+    top: 0.3rem;
+    margin-left: 22rem ;
+    h1{font-size:1.8rem ;}
+    .text{
+    p{font-family: 'PT Sans', sans-serif;font-size: 1.2rem;text-align: justify;line-height: 1.6rem;}}
+    #occupation{@include width-height(inherit,100%)}
+    .lang{@include d-flex-direc(column);
+        h3{margin: 0.6rem 0px;}
+    .progress{
+        @include width-height(85%,0.5rem);
+        position: absolute;
+        right: 2rem;
+        margin-left: 1.5rem;
+        margin-top: 0.5rem;
+        display: inline-block;
+        border-radius: 1rem;
+        .py{@include prgress(80%);
+            &::after{@include prgress_after("80%")}}
+        .cplus{@include prgress(75%);
+            &::after{@include prgress_after("75%")}
+        }
+        .java{@include prgress(60%);
+            &::after{@include prgress_after("60%")}
+        }
+        .html{@include prgress(85%);
+            &::after{@include prgress_after("85%")}
+        }
+        .scss{@include prgress(85%);
+            &::after{@include prgress_after("85%")}
+        }
+        .js{@include prgress(80%);
+            &::after{@include prgress_after("80%")}
+        }
+        .node{@include prgress(70%);
+            &::after{@include prgress_after("70%")}
+        }
+    }}
+}
+}
+#services{width:$width-vw - 10vw;
+    margin: 1rem auto;
+    h1{width: 18rem;margin: 1rem auto;font-size: 2.4rem;color:#ee5253;text-align:center;
+        &::after{@include width-height(inherit,0.8rem);
+                @include font-color(1.5rem,"Font Awesome 5 Free",#10ac84);
+                content: "\f005";
+                display: block;
+                border-bottom: 2px solid #ee5253;
+    }}
+    .cards{
+        margin-top: 5rem;
+        @include vertically_align;
+    .card{@include width-height(25rem,25vh);
+        @include vertically_align;
+        flex-direction: column;
+        margin: 1rem;
+        padding: 1rem;;
+        .card-logo{
+            @include vertically_align;
+            flex-direction: column;
+            h2{text-align: center;}
+            i{font-size: 2.5rem;
+            padding:1rem;
+            border-radius: 50%;
+            border: 2px solid #222f3e;}
+            .card-text{p{text-align: center;}
+            }
+        }
+    }
+}
+}
+
+footer{
+    @include width-height($width-vw,$height-vw - 90vh);
+    @include item-center(#2f3640);
+    color: #dcdde1;
+}
+@media (min-width: 1281px) {
+    #about{height: $height-vw - 30vh;}
+    #services{height: 80vh;}
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #services{height: $height-vw -30vh;}
+    #about{height: $height-vw - 50vh;}
+    .progress{width: 75% !important;}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    #services{height: $height-vw -25vh;}
+    #about{height: $height-vw - 50vh;
+    display: flex;
+    flex-direction: column;}
+    .progress{width: 71% !important;}
+}

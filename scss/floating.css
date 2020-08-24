@@ -1,0 +1,45 @@
+.floatingicon{
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%) !important;
+    -webkit-transform: translateY(-50%) !important;
+    -ms-transform: translateY(-50%) !important;
+    z-index: 1000;
+}
+.icons{
+    text-decoration: none;
+    width: 165px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    font-size:1.1rem ;
+    transform: translateX(130px);
+    transition: all 0.7s ease-in-out;
+}
+.icons:hover{
+    transform: translateX(0px);
+
+}
+.icons i{
+    padding-right: 10px;
+    font-size: 1.7rem;
+}
+#facebook{
+    background-color: #3b5998;
+}
+#youtube{
+    background-color: #bd081c;
+}
+#youtube i{
+    font-size: 1.5rem !important;
+
+}
+#linkedin{
+    background-color: #0077B5;
+}
+#github{
+    background-color: #131418;
+}

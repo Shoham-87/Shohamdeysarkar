@@ -1,0 +1,64 @@
+@mixin width-height($width,$height) {
+    width: $width;
+    height: $height;
+}
+@mixin  d-flex-direc($direc) {
+    display: flex;
+    flex-direction: $direc;
+}
+@mixin vertically_align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin font-color($fontsize,$font-family,$color){
+    font-family: $font-family;
+    color: $color;
+    font-size: $fontsize;
+}
+@mixin absolute_left_bottom($left,$bottom) {
+    position: absolute;
+    left: $left;
+    bottom: $bottom;
+}
+@mixin item-center($bg_color){
+    display: grid;
+    place-items: center;
+background-color: $bg_color;}
+@mixin item-center_nonbg{
+    display: grid;
+    place-items: center;}
+@mixin preloader_border($size,$type,$color) {
+    border-radius: 50%;
+    border: $size $type $color ;
+}
+@mixin preloader_border_left($size,$type,$color) {
+    border-radius: 50%;
+    border-left: $size $type $color ;
+}
+@mixin preloader_border_right($size,$type,$color) {
+    border-radius: 50%;
+    border-right: $size $type $color ;
+}
+@mixin all_color($font_color,$bg_color,$box_color) {
+    color: $font_color;
+    background-color: $bg_color;
+    box-shadow: 1rem 1rem 1rem $box_color;
+}
+@mixin no-border-outline{
+    border: none;
+    outline: none;
+}
+@mixin prgress($width) {
+    border-radius: 1rem;
+    background-color: #4834d4;
+    width: $width;
+    height: inherit;
+}
+@mixin prgress_after($width) {
+    content: $width;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transform:translateY(-10px);
+}
