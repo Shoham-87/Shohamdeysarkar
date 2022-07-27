@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Shohamdeysarkar/static/css/main.453cbeb9.css",
+    "main.js": "/Shohamdeysarkar/static/js/main.1e81f0ad.js",
+    "static/media/about.JPG": "/Shohamdeysarkar/static/media/about.9240aeb5778fe7131fde.JPG",
+    "static/media/img3.png": "/Shohamdeysarkar/static/media/img3.e38f7bc6561bb4ac1402.png",
+    "index.html": "/Shohamdeysarkar/index.html",
+    "main.453cbeb9.css.map": "/Shohamdeysarkar/static/css/main.453cbeb9.css.map",
+    "main.1e81f0ad.js.map": "/Shohamdeysarkar/static/js/main.1e81f0ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.453cbeb9.css",
+    "static/js/main.1e81f0ad.js"
+  ]
+}
